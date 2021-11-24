@@ -18,7 +18,7 @@ const Header = () => {
       <nav className="container container--pall flex flex-jc-sb flex-ai-c">
         <Link href="/">
           <a className="header__logo">
-            <Image src="/mountain.png" alt="mountain" height={50} width={60} />
+            <Image src="/checked.png" alt="mountain" height={50} width={50} />
           </a>
         </Link>
         <Link href="/">
