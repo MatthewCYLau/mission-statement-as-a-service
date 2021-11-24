@@ -32,7 +32,7 @@ const Header = () => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="/">
+          <Link href="/try-now">
             <a>Try Now!</a>
           </Link>
         </div>
@@ -46,7 +46,7 @@ const Header = () => {
             Home
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/try-now">
           <a className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}>
             Try Now!
           </a>

@@ -11,7 +11,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="footer__links col2">
-          <Link href="/">
+          <Link href="/try-now">
             <a>Try Now!</a>
           </Link>
         </div>
