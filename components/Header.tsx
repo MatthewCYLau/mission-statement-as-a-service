@@ -22,11 +22,7 @@ const Header = () => {
           </a>
         </Link>
         <Link href="/">
-          <a
-            onClick={toggleMenu}
-            href="/"
-            className="header__toggle hide-for-desktop"
-          >
+          <a onClick={toggleMenu} className="header__toggle hide-for-desktop">
             <span></span>
             <span></span>
             <span></span>
