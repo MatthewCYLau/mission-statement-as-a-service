@@ -38,3 +38,13 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+*.zip

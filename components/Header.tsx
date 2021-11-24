@@ -13,38 +13,37 @@ const Header = () => {
             <Image src="/mountain.png" alt="mountain" height={50} width={60} />
           </a>
         </Link>
-        {/* <a
-          id="btnHamburger"
-          href="#"
-          className="header__toggle hide-for-desktop"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </a> */}
-
+        <Link href="/">
+          <a
+            id="btnHamburger"
+            href="/"
+            className="header__toggle hide-for-desktop"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </Link>
         <div className="header__links hide-for-mobile">
-          <Link href="#">
+          <Link href="/">
             <a>Home</a>
           </Link>
-          {/* <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a> */}
+          <Link href="/">
+            <a>Try Now!</a>
+          </Link>
         </div>
-
-        <a href="#" className="button header__cta hide-for-mobile">
+        <a href="/" className="button header__cta hide-for-mobile">
           Request Invite
         </a>
       </nav>
-
-      {/* <div className="header__menu has-fade">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
-        <a href="">Blog</a>
-        <a href="">Careers</a>
-      </div> */}
+      <div className="header__menu has-fade">
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <Link href="/">
+          <a>Try Now!</a>
+        </Link>
+      </div>
     </header>
   );
 };
