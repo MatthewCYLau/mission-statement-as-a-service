@@ -40,9 +40,9 @@ const Header = () => {
             <a>Try Now!</a>
           </Link>
         </div>
-        <a href="/" className="button header__cta hide-for-mobile">
-          Request Invite
-        </a>
+        <Link href="/">
+          <a className="button header__cta hide-for-mobile">Request Callback</a>
+        </Link>
       </nav>
       <div className="header__menu has-fade">
         <Link href="/">
