@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className={cn("header", { open: showMenu })}>
-      <div className="overlay has-fade"></div>
+      <div className={cn("overlay", "has-fade", { "fade-in": showMenu })}></div>
 
       <nav className="container container--pall flex flex-jc-sb flex-ai-c">
         <Link href="/">
@@ -40,7 +40,7 @@ const Header = () => {
           <a className="button header__cta hide-for-mobile">Request Callback</a>
         </Link>
       </nav>
-      <div className="header__menu has-fade">
+      <div className={cn("header__menu", "has-fade", { "fade-in": showMenu })}>
         <Link href="/">
           <a className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}>
             Home
