@@ -1,10 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import cn from "classnames";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = React.useState(false);
+
+  const toggleMenu = () => {
+    console.log(showMenu);
+    setShowMenu(!showMenu);
+  };
+
   return (
-    <header className="header">
+    <header className={cn("header", { open: showMenu })}>
       <div className="overlay has-fade"></div>
 
       <nav className="container container--pall flex flex-jc-sb flex-ai-c">
@@ -15,7 +23,7 @@ const Header = () => {
         </Link>
         <Link href="/">
           <a
-            id="btnHamburger"
+            onClick={toggleMenu}
             href="/"
             className="header__toggle hide-for-desktop"
           >
@@ -38,10 +46,14 @@ const Header = () => {
       </nav>
       <div className="header__menu has-fade">
         <Link href="/">
-          <a>Home</a>
+          <a className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}>
+            Home
+          </a>
         </Link>
         <Link href="/">
-          <a>Try Now!</a>
+          <a className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}>
+            Try Now!
+          </a>
         </Link>
       </div>
     </header>
