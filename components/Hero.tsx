@@ -13,10 +13,8 @@ const Hero = () => {
             Define your corporate culture, values, ethics, fundamental goals,
             and agenda on-demand!
           </p>
-          <Link href="/">
-            <a className="button header__cta hide-for-mobile">
-              Request Callback
-            </a>
+          <Link href="/try-now">
+            <a className="button header__cta hide-for-mobile">Try Now!</a>
           </Link>
         </div>
       </div>

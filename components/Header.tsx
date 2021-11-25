@@ -7,7 +7,6 @@ const Header = () => {
   const [showMenu, setShowMenu] = React.useState(false);
 
   const toggleMenu = () => {
-    console.log(showMenu);
     setShowMenu(!showMenu);
   };
 
@@ -21,7 +20,7 @@ const Header = () => {
             <Image src="/checked.png" alt="mountain" height={50} width={50} />
           </a>
         </Link>
-        <Link href="/">
+        <Link href="#">
           <a onClick={toggleMenu} className="header__toggle hide-for-desktop">
             <span></span>
             <span></span>
@@ -32,22 +31,36 @@ const Header = () => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="/try-now">
-            <a>Try Now!</a>
+          <Link href="/about">
+            <a>About</a>
           </Link>
         </div>
-        <Link href="/">
-          <a className="button header__cta hide-for-mobile">Request Callback</a>
+        <Link href="/try-now">
+          <a className="button header__cta hide-for-mobile">Try Now!</a>
         </Link>
       </nav>
       <div className={cn("header__menu", "has-fade", { "fade-in": showMenu })}>
         <Link href="/">
-          <a className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}>
+          <a
+            className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}
+            onClick={() => setShowMenu(false)}
+          >
             Home
           </a>
         </Link>
+        <Link href="/about">
+          <a
+            className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}
+            onClick={() => setShowMenu(false)}
+          >
+            About
+          </a>
+        </Link>
         <Link href="/try-now">
-          <a className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}>
+          <a
+            className={cn({ "fade-in": showMenu, "fade-out": !showMenu })}
+            onClick={() => setShowMenu(false)}
+          >
             Try Now!
           </a>
         </Link>

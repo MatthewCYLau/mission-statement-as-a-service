@@ -18,7 +18,7 @@ const features: Feature[] = [
     imageSource: "/money-bag.png",
     title: "Accelerate time to value",
     description:
-      "MSaas is a digital enabler which helps reduce costs, and increase ROI by 200%",
+      "MSaaS is a digital enabler which helps reduce costs, and increase ROI by 200%",
   },
   {
     imageSource: "/check.png",
@@ -41,8 +41,8 @@ const Features = () => {
         <div className="feature__intro">
           <h2>Why choose MSaaS?</h2>
           <p>
-            We leverage cutting edge technologies to bring digital transoform to
-            your organization like never before.
+            We leverage cutting edge technologies to bring digital
+            transformation to your organization like never before.
           </p>
         </div>
         <div className="feature__grid">

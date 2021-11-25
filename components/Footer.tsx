@@ -11,14 +11,14 @@ const Footer = () => {
           </Link>
         </div>
         <div className="footer__links col2">
-          <Link href="/try-now">
-            <a>Try Now!</a>
+          <Link href="/about">
+            <a>About</a>
           </Link>
         </div>
 
         <div className="footer__cta">
-          <a href="#" className="button">
-            Request Callback
+          <a href="/try-now" className="button">
+            Try Now!
           </a>
         </div>
 

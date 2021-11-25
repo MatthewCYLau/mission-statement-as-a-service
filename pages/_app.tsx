@@ -4,6 +4,8 @@ import "../styles/Header.scss";
 import "../styles/Hero.scss";
 import "../styles/Features.scss";
 import "../styles/Footer.scss";
+import "../styles/Statement.scss";
+import "../styles/About.scss";
 import "../styles/globals.scss";
 import "../styles/animations.scss";
 
