@@ -18,7 +18,7 @@ const Footer = () => {
 
         <div className="footer__cta">
           <a href="#" className="button">
-            Request Invite
+            Request Callback
           </a>
         </div>
 

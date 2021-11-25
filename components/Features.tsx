@@ -12,22 +12,25 @@ const features: Feature[] = [
     imageSource: "/clouds.png",
     title: "Cloud native technology",
     description:
-      "MSaaS leverages cloud native technologies to scale generation of corporate mission statements to infinity",
+      "MSaaS leverages Web 3.0 cloud native technologies to scale corporate mission statements to the moon",
   },
   {
     imageSource: "/money-bag.png",
-    title: "Drives revenue",
-    description: "We can bring you lots of money",
+    title: "Accelerate time to value",
+    description:
+      "MSaas is a digital enabler which helps reduce costs, and increase ROI by 200%",
   },
   {
     imageSource: "/check.png",
     title: "Reduces risk",
-    description: "We can reduce risk",
+    description:
+      "MSaaS mitigates the risks of poor corporate mission statements to your business and help meet regulatory requirements",
   },
   {
     imageSource: "/rocket.png",
     title: "Digital transformation",
-    description: "We can bring you digital transformation",
+    description:
+      "MSaaS is about embracing digital disruption and unlocking exponential value",
   },
 ];
 
