@@ -26,7 +26,7 @@ const Footer = () => {
           &copy; Mission Statement as a Service. All Rights Reserved.
         </div>
       </div>
-      <div className="attribution">Created by Matthew Lau</div>
+      <div className="attribution">Created with Next.js</div>
     </footer>
   );
 };
