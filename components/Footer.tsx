@@ -17,9 +17,9 @@ const Footer = () => {
         </div>
 
         <div className="footer__cta">
-          <a href="/try-now" className="button">
-            Try Now!
-          </a>
+          <Link href="/try-now">
+            <a className="button">Try Now!</a>
+          </Link>
         </div>
 
         <div className="footer__copyright">
