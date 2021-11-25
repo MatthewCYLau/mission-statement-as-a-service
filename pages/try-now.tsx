@@ -1,4 +1,4 @@
-import { InferGetStaticPropsType } from "next";
+import { InferGetServerSidePropsType } from "next";
 import Statement from "../components/Statement";
 
 type Body = {
@@ -7,13 +7,13 @@ type Body = {
 
 const TryNow = ({
   message,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return <Statement message={message} />;
 };
 
 export default TryNow;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(
     `https://europe-west2-react-gke-terraform.cloudfunctions.net/msaas-cloud-function`
   );
