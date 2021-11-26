@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Features from "../components/Features";
+import Pricing from "../components/Pricing";
 import Hero from "../components/Hero";
 
 const Home: NextPage = () => {
@@ -7,6 +8,7 @@ const Home: NextPage = () => {
     <>
       <Hero />
       <Features />
+      <Pricing />
     </>
   );
 };
