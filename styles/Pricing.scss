@@ -1,13 +1,21 @@
 @import "variables";
 @import "mixins";
 
-.price-comparison {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  margin: 1rem;
-  padding: 50px 0;
+.pricing {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem;
+    padding: 50px 0;
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
 }
 
 .price-column {
@@ -16,7 +24,7 @@
   padding: 2rem;
   flex-grow: 1;
   flex-basis: 0;
-  max-width: 275px;
+  width: 275px;
   border-radius: 8px;
 }
 
@@ -25,10 +33,13 @@
   background-color: $royalBlue;
   box-shadow: 0 7px 30px rgba(52, 13, 135, 0.3);
   color: white;
-  margin-top: -1.5rem;
   padding-top: 3.5rem;
-  margin-bottom: -1.5rem;
   padding-bottom: 3.5rem;
+
+  @include breakpoint-up(medium) {
+    margin-bottom: -1.5rem;
+    margin-top: -1.5rem;
+  }
 }
 
 .price-column:first-child {
