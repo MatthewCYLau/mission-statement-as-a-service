@@ -1,64 +1,80 @@
 import React from "react";
+import { PricePlan, AvailableFeatureEnum } from "./interface";
+import PriceColumn from "./PriceColumn";
+
+const pricePlans: PricePlan[] = [
+  {
+    price: 10,
+    planName: "basic",
+    isPopular: false,
+    features: [
+      {
+        name: AvailableFeatureEnum.CS_SUPPORT,
+        active: true,
+      },
+      {
+        name: AvailableFeatureEnum.SPELL_CHECK,
+        active: false,
+      },
+      {
+        name: AvailableFeatureEnum.TRANSLATION,
+        active: false,
+      },
+    ],
+  },
+  {
+    price: 20,
+    planName: "economic",
+    isPopular: true,
+    features: [
+      {
+        name: AvailableFeatureEnum.CS_SUPPORT,
+        active: true,
+      },
+      {
+        name: AvailableFeatureEnum.SPELL_CHECK,
+        active: true,
+      },
+      {
+        name: AvailableFeatureEnum.TRANSLATION,
+        active: false,
+      },
+    ],
+  },
+  {
+    price: 50,
+    planName: "premmium",
+    isPopular: false,
+    features: [
+      {
+        name: AvailableFeatureEnum.CS_SUPPORT,
+        active: true,
+      },
+      {
+        name: AvailableFeatureEnum.SPELL_CHECK,
+        active: true,
+      },
+      {
+        name: AvailableFeatureEnum.TRANSLATION,
+        active: true,
+      },
+    ],
+  },
+];
 
 const Pricing = () => {
   return (
     <section className="pricing">
       <div className="pricing__content container container--pall">
-        <div className="price-column">
-          <div className="price-header">
-            <div className="price">
-              <div className="dollar-sign">$</div>
-              10
-              <div className="per-month">/mo</div>
-            </div>
-            <div className="plan-name">Basic</div>
-          </div>
-          <div className="divider"></div>
-          <div className="plan-feature">Feature A</div>
-          <div className="plan-feature">Feature B</div>
-          <div className="plan-feature inactive">Feature C</div>
-          <div className="plan-feature inactive">Feature D</div>
-          <div className="plan-feature inactive">Feature E</div>
-          <div className="plan-feature inactive">Feature F</div>
-          <button className="cta">Start Today</button>
-        </div>
-        <div className="price-column popular">
-          <div className="most-popular">Most Popular</div>
-          <div className="price-header">
-            <div className="price">
-              <div className="dollar-sign">$</div>
-              20
-              <div className="per-month">/mo</div>
-            </div>
-            <div className="plan-name">Professional</div>
-          </div>
-          <div className="divider"></div>
-          <div className="plan-feature">Feature A</div>
-          <div className="plan-feature">Feature B</div>
-          <div className="plan-feature">Feature C</div>
-          <div className="plan-feature">Feature D</div>
-          <div className="plan-feature inactive">Feature E</div>
-          <div className="plan-feature inactive">Feature F</div>
-          <button className="cta">Start Today</button>
-        </div>
-        <div className="price-column">
-          <div className="price-header">
-            <div className="price">
-              <div className="dollar-sign">$</div>
-              10
-              <div className="per-month">/mo</div>
-            </div>
-            <div className="plan-name">Basic</div>
-          </div>
-          <div className="divider"></div>
-          <div className="plan-feature">Feature A</div>
-          <div className="plan-feature">Feature B</div>
-          <div className="plan-feature inactive">Feature C</div>
-          <div className="plan-feature inactive">Feature D</div>
-          <div className="plan-feature inactive">Feature E</div>
-          <div className="plan-feature inactive">Feature F</div>
-          <button className="cta">Start Today</button>
-        </div>
+        {pricePlans.map((plan, i) => (
+          <PriceColumn
+            key={i}
+            price={plan.price}
+            isPopular={plan.isPopular}
+            planName={plan.planName}
+            features={plan.features}
+          />
+        ))}
       </div>
     </section>
   );
