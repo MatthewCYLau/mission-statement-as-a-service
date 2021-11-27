@@ -29,7 +29,6 @@ npm run dev
 region  = "europe-west2"
 zone    = "europe-west2-b"
 project = <GCP-PROJECT-ID>
-creds   = <PATH-TO-GCP-CREDENTIALS-JSON>
 ```
 
 - Create a Cloud Storage bucket to store Terraform state, and populate `main.tf`:
@@ -46,6 +45,7 @@ terraform {
 ## Create GCP resources
 
 ```bash
+gcloud auth application-default login # authenticate with GCP
 cd deploy # change to deploy directory
 terraform init # initialises Terraform
 terraform apply # deploys GCP stack

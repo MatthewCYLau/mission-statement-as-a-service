@@ -21,7 +21,7 @@ resource "google_cloudfunctions_function" "function" {
   timeout               = 60
   entry_point           = "returnMissionStatement"
   labels = {
-    my-label = "msaas"
+    app = "mission-statement-as-a-service"
   }
 
 }

@@ -15,7 +15,7 @@ export default TryNow;
 
 export const getServerSideProps = async () => {
   const res = await fetch(
-    `https://europe-west2-react-gke-terraform.cloudfunctions.net/msaas-cloud-function`
+    `https://europe-west2-open-source-apps-001.cloudfunctions.net/msaas-cloud-function`
   );
   const body: Body = await res.json();
 

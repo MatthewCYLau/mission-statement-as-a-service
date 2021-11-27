@@ -10,7 +10,7 @@ terraform {
 
 terraform {
   backend "gcs" {
-    bucket = "msaas-tf-state"
+    bucket = "msaas-tf-state-001"
     prefix = "terraform/state"
   }
 }
@@ -19,5 +19,4 @@ provider "google" {
   region      = var.region
   zone        = var.zone
   project     = var.project
-  credentials = var.creds
 }
