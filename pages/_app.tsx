@@ -7,6 +7,7 @@ import "../styles/Footer.scss";
 import "../styles/Statement.scss";
 import "../styles/About.scss";
 import "../styles/Pricing.scss";
+import "../styles/FAQ.scss";
 import "../styles/globals.scss";
 import "../styles/animations.scss";
 
