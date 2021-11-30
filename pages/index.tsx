@@ -1,7 +1,7 @@
 import { InferGetServerSidePropsType } from "next";
 import Features from "../components/Features";
 import Pricing from "../components/Pricing";
-import FAQ from "../components/FAQ/FAQ";
+import FAQs from "../components/FAQs/FAQs";
 import Hero from "../components/Hero";
 
 const Home = ({
@@ -12,7 +12,7 @@ const Home = ({
       <Hero />
       <Features />
       <Pricing />
-      <FAQ faqs={faqs.items} />
+      <FAQs faqs={faqs.items} />
     </>
   );
 };
@@ -38,8 +38,8 @@ export const getServerSideProps = async () => {
   };
 };
 
-const space = process.env.CONTENTFUL_SPACE_ID;
-const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
+const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
+const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
 
 const fetchContent = async (query: string) => {
   try {

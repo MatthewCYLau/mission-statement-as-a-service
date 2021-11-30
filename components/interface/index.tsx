@@ -16,3 +16,8 @@ export enum AvailableFeatureEnum {
 }
 
 type AvailableFeature = "Customer support" | "Translation" | "Spell check";
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}

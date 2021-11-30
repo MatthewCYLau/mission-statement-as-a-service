@@ -1,5 +1,11 @@
 @import "../../styles/variables";
 
+.card {
+  display: flex;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
 .icon {
   display: flex;
   justify-content: center;
