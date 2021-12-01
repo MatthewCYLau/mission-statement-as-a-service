@@ -1,4 +1,12 @@
+@import "mixins";
+
 .faq {
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-up(medium) {
+      display: block;
+    }
   }
 }
